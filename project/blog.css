@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 70vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+.header_container{
+    margin-bottom: 2.8rem;
+}
+.header_title{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    text-align: center;
+}
+.header_desc{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 1rem;
+    color: rgb(66, 64, 64);
+}
+.main_container{
+display: grid;
+justify-content: center;
+gap: 1.5rem;
+grid-template-columns: repeat(1,1fr);
+}
+.card_container{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(190, 184, 184);
+    border-radius: 5px;
+}
+.card_image_container{
+    position: relative;
+    overflow: hidden;
+    height: 16rem;
+    border-radius: 5px;
+}
+.card_image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.card_title_container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+.card_container:hover .card_image{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+.card_title{
+    font-size: 1.1rem;
+    /* font-weight: 600; */
+    color:rgb(13, 13, 16);
+    line-height: 1rem;
+    margin-bottom: 0.3rem;
+}
+.card_title_link:hover .card_title{
+    color: rgb(28, 9, 240);
+}
+.card_desc{
+    color: rgb(68, 67, 67);
+}
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+}
+.author_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7rem;
+}
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2rem;
+    overflow: hidden;
+    background-color: rgba(234, 222, 222, 0.923);
+    border: 1px solid rgb(189, 182, 182);
+    border-radius: 50%;
+}
+.avatar1{
+    height: 100%;
+    width: 100%;
+}
+.card_info_container{
+    display: flex;
+    flex-direction: column;
+}
+.card_info_container span:nth-child(1){
+    font-size: 0.9rem;
+    color: blue;
+}
+.card_info_container span:nth-child(2){
+    font-size: 0.7rem;
+    color: rgb(80, 80, 83);
+}
+.author_tag_container span{
+    font-size: 0.8rem;
+     line-height: 1.3rem;
+    border: 1px solid rgb(85, 83, 83);
+    border-radius: 2px;
+    color: rgb(49, 48, 47);
+    padding: 0.25rem 0.5rem;
+}
+
+@media (min-width:500px) {
+    .main_container{
+    grid-template-columns: repeat(2,1fr);
+    }
+    .card_image_container{
+        height: 14rem;
+    }
+}
+@media (min-width:1080px) {
+    .main_container{
+    grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1373px) {
+    .main_container{
+    grid-template-columns: repeat(4,1fr);
+    }
+}
